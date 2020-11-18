@@ -46,7 +46,7 @@ This Qubes setup allows you to keep SSH private keys in a vault VM (`vault`) and
    user@debian-10:~$ sudo apt-get install nmap ncat
    ```
    
-3. If you *don't* plan to use KeePassXC, install `ssh-askpass`.
+3. If you **do not** plan to use KeePassXC, install `ssh-askpass`.
 
    For Fedora templates:<br/>
    ```
@@ -332,7 +332,7 @@ Theoretically, you can use any AppVM but to increase security it is advised to c
 
     ```shell_prompt
     [user@vault ~]$ ssh-add -L
-    ssh-ed25519 <public key string> user@vault-keepassxc
+    ssh-ed25519 <public key string> user@vault
     ```
 
 ## Test Your Configuration
@@ -368,7 +368,7 @@ Check if it returns `ssh-ed25519 <public key string>`
 ## (Optional) Backing Up the Configuration
 ### System Backup
 Start a system backup as per the [User Documentation][CreateBackup].
-### KeePassXC Database Backup
+## KeePassXC Database Backup
 You can also only back up your \*.kdbx file.
 
 Depending on your threat model you can:
@@ -377,7 +377,7 @@ Depending on your threat model you can:
 * Upload the \*.kdbx to an end-to-end-encrypted email box (e.g. Tutanota, ProtonMail)
 
 Want more Qubes split magic?
-Check out [Split-GPG:][Split-GPG].
+Check out [Split-GPG][Split-GPG].
 
 -------------------------------
 
